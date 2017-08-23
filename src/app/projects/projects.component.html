@@ -1,0 +1,24 @@
+<div class="container text-center">
+    <h2>Portfolio</h2>
+    <p>
+        Whitten Associates exceeds in Master Planning, Mixed Use and Urban Redevelopment Communities.
+    </p>
+</div>
+<div class="portfolio-grid">
+    <div class="row">
+        <div  *ngFor="let thumbnail of thumbnails" class="col-lg-3 col-sm-6 col-xs-12" (click)="openSubProject(thumbnail)">
+            <div class="card card-block">
+                <a><img [src]="thumbnail.imageUrl"/>
+                    <div class="portfolio-over">
+                        <div>
+                            <h3 class="card-title">{{thumbnail.folderName}}</h3>
+                            <!-- <p class="card-text">
+                            Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+                            </p> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
