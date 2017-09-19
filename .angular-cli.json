@@ -19,8 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
-        "styles.scss"
+        "style.css", "bootstrap.css", "bootstrap-theme.css", "flexslider.css", "font-awesome.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

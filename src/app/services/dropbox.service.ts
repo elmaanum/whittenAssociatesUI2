@@ -6,7 +6,7 @@ import {DomSanitizer, SafeHtml, SafeStyle, SafeScript, SafeUrl, SafeResourceUrl}
 @Injectable()
 export class DropboxService {
     private _Dropbox = require('dropbox');
-    private dbx = new this._Dropbox({accessToken: ''});
+    private dbx = new this._Dropbox({accessToken: '4DoLY_hotPAAAAAAAAAOQi05ppmcsXyaj6Ag8iNaelcfLKXBXppDi2yjP054Twi3'});
     private thumbnails = [];
 
     constructor(private sanitizer: DomSanitizer) {}
