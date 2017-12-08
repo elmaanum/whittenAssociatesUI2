@@ -7,8 +7,6 @@ import { DropboxService } from './services/dropbox.service';
   // styleUrls: ['./app.component.css','./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'Tour of Heroes';
-
   constructor(private _dropboxService: DropboxService) {}
 
   ngOnInit() {

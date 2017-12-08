@@ -11,13 +11,25 @@ import { HomeComponent } from './home/home.component';
 
 import { DropboxService } from './services/dropbox.service';
 import { SubProjectsComponent } from './projects/sub-projects/sub-projects.component';
+import { ExpertiseComponent } from './expertise/expertise.component';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { ThumbnailFilterPipe } from './thumbnail-filter.pipe';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectsComponent,
     HomeComponent,
-    SubProjectsComponent
+    SubProjectsComponent,
+    ExpertiseComponent,
+    ContactComponent,
+    FooterComponent,
+    AboutComponent,
+    ThumbnailFilterPipe,
   ],
   imports: [
     NgbModule.forRoot(),
@@ -29,7 +41,7 @@ import { SubProjectsComponent } from './projects/sub-projects/sub-projects.compo
       { path: 'projects/:folderName', component: SubProjectsComponent },
       {
         path: '',
-        redirectTo: '/home',
+        redirectTo: '/',
         pathMatch: 'full',
       },
     ])

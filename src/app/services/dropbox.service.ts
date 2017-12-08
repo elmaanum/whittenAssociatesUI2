@@ -6,7 +6,7 @@ import {DomSanitizer, SafeHtml, SafeStyle, SafeScript, SafeUrl, SafeResourceUrl}
 @Injectable()
 export class DropboxService {
     private _Dropbox = require('dropbox');
-    private dbx = new this._Dropbox({accessToken: ''});
+    private dbx = new this._Dropbox({accessToken: '4DoLY_hotPAAAAAAAAAOkw8YImtvR_v3ZD0HdykEFsWsWqo8AUQUdB3cTZy_f3FZ'});
     private thumbnails = [];
 
     constructor(private sanitizer: DomSanitizer) {}
@@ -17,47 +17,34 @@ export class DropboxService {
     }
 
     setThumbnails(){
-        // new Promise((resolve, reject)=> {
-            console.log('set.thumbnails',this.thumbnails)
-
-            let promises = []
-            this.getFileList()
-            .then(result => {
-                result.entries.forEach(element => {
-                    
-                    if (element['media_info']) {
-                        var thumbPromise = this.dbx.filesGetThumbnail({path: element.path_lower, size:'w1024h768'})
-                        promises.push(thumbPromise)
-                    }
-                })
+        let promises = []
+        this.getFileList()
+        .then(result => {
+            result.entries.forEach(element => {
+                if (element['media_info']) {
+                    var thumbPromise = this.dbx.filesGetThumbnail({path: element.path_lower, size:'w1024h768'})
+                    promises.push(thumbPromise)
+                }
             })
-            .then(result => {
-                Observable.forkJoin(promises)
-                .subscribe(t => {
-                    let thumbNails=[];
-                    for (var key in t) {
-                        if (t.hasOwnProperty(key)) {
-                            var element = t[key];
-                            console.log('imageerror')
-                            let url = URL.createObjectURL(element['fileBlob'])
-                            // url = this.sanitizer.sanitize(SecurityContext.URL, url);
-                            // URL.createObjectURL(res);
-                            let sanitizedUrl = this.sanitizer.bypassSecurityTrustUrl(url);
-
-                            this.thumbnails.push({
-                                imageUrl:sanitizedUrl,
-                                folderName:element['path_display'].split('/')[1]
-                            })
-                            
-
-                        }
+        })
+        .then(result => {
+            Observable.forkJoin(promises)
+            .subscribe(t => {
+            console.log('t', t)
+                let thumbNails=[];
+                for (var key in t) {
+                    if (t.hasOwnProperty(key)) {
+                        var element = t[key];
+                        let url = URL.createObjectURL(element['fileBlob'])
+                        let sanitizedUrl = this.sanitizer.bypassSecurityTrustUrl(url);
+                        this.thumbnails.push({
+                            imageUrl:sanitizedUrl,
+                            folderName:element['path_display'].split('/')[1]
+                        })
                     }
-                    console.log('set.thumbnails',this.thumbnails)
-
-                    // resolve(thumbNails)
-                })
+                }
             })
-        // })
+        })
     }
 
     getFileList() {
