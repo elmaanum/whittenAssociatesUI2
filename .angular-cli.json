@@ -22,6 +22,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "css/bootstrap.css",
         "css/flexslider.css",
         "css/bootstrap.min.css",
         "css/bootstrap-theme.min.css",

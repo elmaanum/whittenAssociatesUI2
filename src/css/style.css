@@ -191,7 +191,7 @@ textarea:focus {
 	font-family: 'Raleway', sans-serif;
 	background-color: #87855f;
 	color: #fff;
-	font-size: 30px;
+
 	font-weight: bold;
 }
 /*Toggle Menu*/
@@ -268,15 +268,16 @@ textarea:focus {
 	border: 0;
 }
 
-#slider.flexslider .slides > li img {
-	
+#slider.flexslider .slides > li img::before {
+	background-color: #87855f;
 }
 
 /*Slider Caption*/
 #slider .caption {
 	position: absolute;
 	width: 600px;
-	top: 10%;
+	margin-left: 10%;
+	top: 15%;
 }
 
 #slider .caption h2 {
@@ -284,6 +285,7 @@ textarea:focus {
 	font-weight: 1000;
 	font-size: 30px;
 	text-transform: uppercase;
+
 }
 
 .fa-lc:before {
@@ -314,6 +316,7 @@ textarea:focus {
 	padding: 0 10px;
 	/*background-color: #87855f;*/
 	color: #fff;
+	margin-left: 5%;
 }
 
 #slider .caption p {
@@ -323,9 +326,10 @@ textarea:focus {
 	font-style: italic;
 	margin-top: 30px;
 	color: #fff;
+	margin-left: 10%;
 }
 
-#slider .caption button {
+/*#slider .caption button {
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 700;
 	font-size: 17px;
@@ -333,14 +337,14 @@ textarea:focus {
 	background-color: #87855f;
 	color: #fff;
 	border: 1px solid #fff;
-}
+}*/
 
-#slider .caption button:hover {
+/*#slider .caption button:hover {
 	background-color: #fff;
     border: 1px solid #87855f;
     transition: 0.3s;
     color: #87855f;
-}
+}*/
 
 
 /*Media*/
@@ -349,6 +353,7 @@ textarea:focus {
 		position: absolute;
 		width: 400px;
 		top: 55%;
+		margin-left: 10%
 	}
 
 	#slider .caption h2 {
@@ -360,16 +365,17 @@ textarea:focus {
 		font-style: italic;
 		margin: 0;
 		padding: 0;
-		color: #87855f;
+		color: #fff;
+		margin-left: 10%
 	}
 
-	#slider .caption .btn {
+	/*#slider .caption .btn {
 		width: 80px;
 	    height: 20px;
 		font-size: 10px;
 		margin-top: 5px;
 		padding: 0;
-	}
+	}*/
 }
 
 /*Media*/
@@ -378,6 +384,7 @@ textarea:focus {
 		position: absolute;
 		width: 450px;
 		top: 50%;
+		margin-left: 10%
 	}
 
 	#slider .caption h2 {
@@ -388,16 +395,16 @@ textarea:focus {
 		font-size: 16px;
 		font-style: italic;
 		margin-top: 15px;
-		color: #87855f;
+		color: #fff;
 	}
 
-	#slider .caption .btn {
+	/*#slider .caption .btn {
 		width: 110px;
 	    height: 30px;
 		font-size: 12px;
 		margin-top: 15px;
 
-	}
+	}*/
 }
 
 /*Control Nav*/
@@ -432,6 +439,7 @@ textarea:focus {
 
 /*About*/
 #about {
+	margin-top: 50px;
 	padding: 80px;
 }
 
@@ -451,6 +459,11 @@ textarea:focus {
 	line-height: 25px;
 	color: #8e8e8e;
 	margin-bottom: 50px;
+}
+
+#about .about-left {
+	position: relative;
+    z-index: 2;
 }
 
 #about .about-left-tim{
@@ -550,6 +563,14 @@ textarea:focus {
 
 /*Media*/
 @media screen and (min-width: 320px) and (max-width: 520px) {
+	#about .about-left-tim{
+	  display: none
+	}
+	
+	#about .about-left-heather{
+	  display: none
+	}
+	
 	#about {
 		padding: 0;
 	}
