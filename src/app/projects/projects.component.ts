@@ -6,7 +6,7 @@ import { DropboxService } from '../services/dropbox.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'projects',
+  selector: 'app-projects',
   templateUrl: './projects.component.html',
   // styleUrls: ['../app.component.css','../app.component.scss']
 })
