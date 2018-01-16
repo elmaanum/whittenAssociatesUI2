@@ -8,9 +8,7 @@ import { DropboxService } from './services/dropbox.service';
 })
 export class AppComponent implements OnInit {
   constructor(private _dropboxService: DropboxService) {}
-
   ngOnInit() {
-    this._dropboxService.setThumbnails()
+    this._dropboxService.setThumbnails();
   }
-
 }

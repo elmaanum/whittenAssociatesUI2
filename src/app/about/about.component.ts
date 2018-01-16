@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Thumbnail } from '../thumbnail';
+import { DropboxService } from '../services/dropbox.service';
 
 @Component({
   selector: 'app-about',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+  thumbnails: Thumbnail[];
 
-  constructor() { }
+  constructor(private dropboxService: DropboxService) { }
 
   ngOnInit() {
+    this.dropboxService.getThumbnails('about').then(thumbnails => this.thumbnails = thumbnails);
   }
 
 }
