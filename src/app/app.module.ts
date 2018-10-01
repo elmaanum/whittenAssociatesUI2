@@ -8,7 +8,6 @@ import { ProjectsComponent } from './projects/projects.component';
 import { HomeComponent } from './home/home.component';
 
 import { DropboxService } from './services/dropbox.service';
-import { SubProjectsComponent } from './projects/sub-projects/sub-projects.component';
 import { ExpertiseComponent } from './expertise/expertise.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
@@ -20,7 +19,6 @@ import { ThumbnailFilterPipe } from './thumbnail-filter.pipe';
     AppComponent,
     ProjectsComponent,
     HomeComponent,
-    SubProjectsComponent,
     ExpertiseComponent,
     ContactComponent,
     FooterComponent,
@@ -31,16 +29,6 @@ import { ThumbnailFilterPipe } from './thumbnail-filter.pipe';
     NgbModule.forRoot(),
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([
-      { path: 'home', component: HomeComponent },
-      { path: 'projects', component: ProjectsComponent },
-      { path: 'projects/:folderName', component: SubProjectsComponent },
-      {
-        path: '',
-        redirectTo: '/',
-        pathMatch: 'full',
-      },
-    ])
   ],
   providers: [DropboxService],
   bootstrap: [AppComponent]

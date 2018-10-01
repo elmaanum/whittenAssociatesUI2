@@ -1,4 +1,7 @@
+import { SafeUrl } from '@angular/platform-browser';
+
 export class Thumbnail {
-  imageUrl: string;
+  imageUrl: SafeUrl;
+  superFolder: string;
   folderName: string;
 }

@@ -463,7 +463,8 @@ textarea:focus {
 
 #about .about-left {
 	position: relative;
-    z-index: 2;
+  z-index: 2;
+  margin-top: 250px;
 }
 
 #about .about-left-tim{
@@ -566,11 +567,11 @@ textarea:focus {
 	#about .about-left-tim{
 	  display: none
 	}
-	
+
 	#about .about-left-heather{
 	  display: none
 	}
-	
+
 	#about {
 		padding: 0;
 	}
@@ -811,7 +812,7 @@ textarea:focus {
 
 #service .col-md-6 {
 	padding: 0;
-	
+
 }
 
 #service .service-heading {
@@ -845,38 +846,38 @@ textarea:focus {
 	position: relative;
 	width: 50%;
 	float: left;
-	background: #f2f3f4;	
+	background: #f2f3f4;
 }
 
 .services-style-one .service-block {
 	position: relative;
-	margin-bottom: 40px;	
+	margin-bottom: 40px;
 }
 
 .services-style-one .services-column .content-outer {
 	position: relative;
 	float: right;
 	max-width: 700px;
-	padding: 80px 20px 40px 40px;	
+	padding: 80px 20px 40px 40px;
 }
 
 .services-style-one .services-column .icon-box {
 	font-size: 36px;
 	margin-bottom: 15px;
 	line-height: 1px;
-	color: #87855f;	
+	color: #87855f;
 }
 
 .services-style-one .services-column h4 {
 	font-size: 14px;
 	margin-bottom: 10px;
-	color: #1c1c1c;	
+	color: #1c1c1c;
 }
 
 .services-style-one .services-column .text {
 	font-size: 13px;
 	color: #5a5a5a;
-	max-width: 250px;	
+	max-width: 250px;
 }
 
 .services-style-one .content-column {
@@ -891,7 +892,7 @@ textarea:focus {
 	position: relative;
 	float:left;
 	padding: 170px 20px 100px 100px;
-	max-width: 700px;	
+	max-width: 700px;
 }
 
 .services-style-one .content-column .sec-title h2 {
@@ -980,7 +981,7 @@ textarea:focus {
 	}
 
 	.services-style-one .content-column .content-box {
-		padding: 200px 20px 100px 20px;	
+		padding: 200px 20px 100px 20px;
 	}
 }
 
@@ -995,7 +996,7 @@ textarea:focus {
 	}
 
 	.services-style-one .content-column .content-box {
-		padding: 200px 20px 100px 20px;	
+		padding: 200px 20px 100px 20px;
 	}
 }
 
@@ -1305,7 +1306,7 @@ textarea:focus {
 #footer .footer-heading span {
 	border-bottom: 2px solid black;
 	padding-bottom: 8px;
-	
+
 }
 
 #footer .footer-heading p {

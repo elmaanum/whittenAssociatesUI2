@@ -9,11 +9,29 @@ import { DropboxService } from '../services/dropbox.service';
 })
 export class AboutComponent implements OnInit {
   thumbnails: Thumbnail[];
+  timBioPicURL: string;
+  heatherBioPicURL: string;
 
-  constructor(private dropboxService: DropboxService) { }
+  constructor(private dropBoxService: DropboxService) { }
 
   ngOnInit() {
-    this.dropboxService.getThumbnails('about').then(thumbnails => this.thumbnails = thumbnails);
+    this.timBioPicURL = '';
+    this.heatherBioPicURL = '';
+    this.dropBoxService.getThumbnails('about')
+      .then(thumbs => new Promise(resolve =>
+        setTimeout(() => resolve(this.thumbnails = thumbs), 5000))
+      )
+      .then(results => this.setBioPic(results));
   }
 
+  setBioPic(thumbNails) {
+    thumbNails.map(thumbNail => {
+      this.heatherBioPicURL = thumbNail.folderName.includes('heather')
+        ? thumbNail.url
+        : '';
+      this.timBioPicURL = thumbNail.folderName.includes('tim')
+        ? thumbNail.url
+        : '';
+    });
+  }
 }
