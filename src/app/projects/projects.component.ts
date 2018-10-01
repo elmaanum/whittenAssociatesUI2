@@ -5,23 +5,22 @@ import { DropboxService } from '../services/dropbox.service';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  // styleUrls: ['../app.component.css','../app.component.scss']
+  styleUrls: []
 })
 export class ProjectsComponent implements OnInit {
   title: 'Projects';
   thumbnails: Thumbnail[];
   folderName: string;
-  filterArgs = undefined;
+  filterArgs: object;
 
   constructor(private dropboxService: DropboxService) { }
   ngOnInit() {
-    this.dropboxService.getThumbnails('portfolio').then(thumbnails => this.thumbnails = thumbnails);
+    this.dropboxService.getThumbnails('portfolio')
+      .then(thumbnails => this.thumbnails = thumbnails);
   }
   toggleFilter(selectedType) {
-    if (selectedType !== 'All') {
-        this.filterArgs = {folderName: selectedType};
-    } else {
-      this.filterArgs = undefined;
-    }
+    this.filterArgs = selectedType !== 'All'
+      ? {folderName: selectedType}
+      : null;
   }
 }
