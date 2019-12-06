@@ -273,14 +273,30 @@ textarea:focus {
 }
 
 /*Slider Caption*/
-#slider .caption {
+#slider .meyer-caption {
 	position: absolute;
-	width: 600px;
+	width: 100%;
+	top: 5%;
 	margin-left: 10%;
-	top: 15%;
+	text-align: center
 }
 
-#slider .caption h2 {
+#slider .waypoint-caption {
+	position: absolute;
+	width: 100%;
+	top: 78%;
+	margin-left: 24%;
+	text-align: center
+}
+#slider .oaks-caption {
+	position: absolute;
+	width: 100%;
+	top: 73%;
+	margin-left: -7%;
+	text-align: center
+}
+
+#slider h2 {
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 1000;
 	font-size: 30px;
@@ -312,14 +328,14 @@ textarea:focus {
     content: 'A';
 }
 
-#slider .caption span {
+#slider span {
 	padding: 0 10px;
 	/*background-color: #87855f;*/
 	color: #fff;
 	margin-left: 5%;
 }
 
-#slider .caption p {
+#slider p {
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 700;
 	font-size: 24px;
@@ -329,7 +345,7 @@ textarea:focus {
 	margin-left: 10%;
 }
 
-/*#slider .caption button {
+#slider button {
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 700;
 	font-size: 17px;
@@ -337,30 +353,30 @@ textarea:focus {
 	background-color: #87855f;
 	color: #fff;
 	border: 1px solid #fff;
-}*/
+}
 
-/*#slider .caption button:hover {
+#slider button:hover {
 	background-color: #fff;
     border: 1px solid #87855f;
     transition: 0.3s;
     color: #87855f;
-}*/
+}
 
 
 /*Media*/
 @media screen and (min-width: 320px) and (max-width: 520px) {
-	#slider .caption {
+	#slider {
 		position: absolute;
 		width: 400px;
 		top: 55%;
 		margin-left: 10%
 	}
 
-	#slider .caption h2 {
+	#slider h2 {
 		font-size: 15px;
 	}
 
-	#slider .caption p {
+	#slider p {
 		font-size: 10px;
 		font-style: italic;
 		margin: 0;
@@ -369,36 +385,36 @@ textarea:focus {
 		margin-left: 10%
 	}
 
-	/*#slider .caption .btn {
+	/* #slider .btn {
 		width: 80px;
 	    height: 20px;
 		font-size: 10px;
 		margin-top: 5px;
 		padding: 0;
-	}*/
+	} */
 }
 
 /*Media*/
 @media screen and (min-width: 521px) and (max-width: 980px) {
-	#slider .caption {
+	#slider {
 		position: absolute;
 		width: 450px;
 		top: 50%;
 		margin-left: 10%
 	}
 
-	#slider .caption h2 {
+	#slider h2 {
 		font-size: 24px;
 	}
 
-	#slider .caption p {
+	#slider p {
 		font-size: 16px;
 		font-style: italic;
 		margin-top: 15px;
 		color: #fff;
 	}
 
-	/*#slider .caption .btn {
+	/*#slider .btn {
 		width: 110px;
 	    height: 30px;
 		font-size: 12px;
